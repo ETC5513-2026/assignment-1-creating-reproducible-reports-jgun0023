@@ -1,6 +1,7 @@
 ---
 title: "Marketing Spend and Customer Purchases"
 author: "Jacqueline Gunawan"
+
 format: html
 editor: visual
 execute:
@@ -14,4 +15,17 @@ library(tidyverse)
 library(readr)
 library(knitr)
 library(dslabs)
+library(ggplot2)
+
+Marketing_data <- read_csv("data/34666869_Jacqueline Gunawan.csv")
+view(Marketing_data)
+
 ```
+
+## Purpose
+
+This report investigates the effectiveness of a personalized marketing campaign conducted over the past quarter. Specifically, it examines whether increasing marketing spend per customer leads to higher purchase amounts. Understanding this relationship is important for improving the efficiency of marketing budgets. The findings will help guide the allocation of marketing resources in the future.
+
+## Research Question
+
+The aim of this report is to determine whether or not a higher marketing spend per customer leads to increased purchase amounts or visits. The analysis focuses on identifying trends and relationships between these variables. The goal is to evaluate whether increased spending translates into meaningful revenue gains.
