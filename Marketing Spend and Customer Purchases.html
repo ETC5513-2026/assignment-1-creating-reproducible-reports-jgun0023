@@ -71,10 +71,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 150 × 7
+   customer_id  signup_date marketing_spend visits purchase_amount segment notes
+   &lt;chr&gt;        &lt;chr&gt;                 &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;
+ 1 34666869_c0… 2025-01-29             69.7      2          215.   Consum… N/A  
+ 2 34666869_c0… 2025-07-13            278.      11          199.   Consum… cont…
+ 3 34666869_c0… 2024-10-02             73.9      4            9.96 Consum… cont…
+ 4 34666869_c0… 18/10/2025            142.       5          219.   Consum… &lt;NA&gt; 
+ 5 34666869_c0… 2025-01-16            214.       4          191.   SMB     &lt;NA&gt; 
+ 6 34666869_c0… Jan 12, 20…            67.4      4            0    Consum… &lt;NA&gt; 
+ 7 34666869_c0… 2025-06-18            134.       7          160.   Consum… &lt;NA&gt; 
+ 8 34666869_c0… Dec 21, 20…            68.4      3           22.3  Consum… cont…
+ 9 34666869_c0… 2025-05-27            207.       2          182.   Consum… N/A  
+10 34666869_c0… 2025-07-20            167.       5           NA    SMB     retu…
+# ℹ 140 more rows</code></pre>
+</div>
+</div>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
 <p>This report investigates the effectiveness of a personalized marketing campaign conducted over the past quarter. Specifically, it examines whether increasing marketing spend per customer leads to higher purchase amounts. Understanding this relationship is important for improving the efficiency of marketing budgets. The findings will help guide the allocation of marketing resources in the future.</p>
+</section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>The aim of this report is to determine whether or not a higher marketing spend per customer leads to increased purchase amounts or visits.</p>
+<p>The aim of this report is to determine whether or not a higher marketing spend per customer leads to increased purchase amounts or visits. The analysis focuses on identifying trends and relationships between these variables. The goal is to evaluate whether increased spending translates into meaningful revenue gains.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 132 × 6
+   customer_id    signup_date marketing_spend visits purchase_amount segment 
+   &lt;chr&gt;          &lt;date&gt;                &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;   
+ 1 34666869_c0001 2025-01-29             69.7      2          215.   Consumer
+ 2 34666869_c0002 2025-07-13            278.      11          199.   Consumer
+ 3 34666869_c0003 2024-10-02             73.9      4            9.96 Consumer
+ 4 34666869_c0004 NA                    142.       5          219.   Consumer
+ 5 34666869_c0005 2025-01-16            214.       4          191.   SMB     
+ 6 34666869_c0006 NA                     67.4      4            0    Consumer
+ 7 34666869_c0007 2025-06-18            134.       7          160.   Consumer
+ 8 34666869_c0008 NA                     68.4      3           22.3  Consumer
+ 9 34666869_c0009 2025-05-27            207.       2          182.   Consumer
+10 34666869_c0011 2025-07-06            119.       7          122.   Consumer
+# ℹ 122 more rows</code></pre>
+</div>
+</div>
+<p>The dataset (“Marketing_data”) contains customer-level data from a personalized marketing campaign. It includes variables such as marketing spend per customer and purchase amount, along with other customer attributes. Prior to analyzing, the dataset was cleaned by standardizing inconsistent date formats and handling missing values in key variables such as purchase amount. Non-essential values, such as notes, were excluded from the analysis to improve clarity.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date" class="uri">https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date</a></p>
 </section>
 
 </main>

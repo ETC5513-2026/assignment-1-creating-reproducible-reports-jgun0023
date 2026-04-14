@@ -20,6 +20,8 @@ library(ggplot2)
 Marketing_data <- read_csv("data/34666869_Jacqueline Gunawan.csv")
 view(Marketing_data)
 
+Marketing_data
+
 ```
 
 ## Purpose
@@ -29,3 +31,23 @@ This report investigates the effectiveness of a personalized marketing campaign 
 ## Research Question
 
 The aim of this report is to determine whether or not a higher marketing spend per customer leads to increased purchase amounts or visits. The analysis focuses on identifying trends and relationships between these variables. The goal is to evaluate whether increased spending translates into meaningful revenue gains.
+
+## Dataset
+
+```{r}
+cleaned_data <- Marketing_data |>
+  mutate(
+    notes = str_replace(notes, "N/A", "NA"),
+    signup_date = as.Date(signup_date, tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
+  ) |>
+  filter(!is.na(purchase_amount)) |>
+  select(-notes)
+
+cleaned_data
+```
+
+The dataset ("Marketing_data") contains customer-level data from a personalized marketing campaign. It includes variables such as marketing spend per customer and purchase amount, along with other customer attributes. Prior to analyzing, the dataset was cleaned by standardizing inconsistent date formats and handling missing values in key variables such as purchase amount. Non-essential values, such as notes, were excluded from the analysis to improve clarity.
+
+## References
+
+<https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date>
