@@ -18,10 +18,6 @@ library(dslabs)
 library(ggplot2)
 
 Marketing_data <- read_csv("data/34666869_Jacqueline Gunawan.csv")
-view(Marketing_data)
-
-Marketing_data
-
 ```
 
 ## Purpose
@@ -34,6 +30,8 @@ The aim of this report is to determine whether or not a higher marketing spend p
 
 ## Dataset
 
+### Introduction
+
 ```{r}
 cleaned_data <- Marketing_data |>
   mutate(
@@ -42,11 +40,17 @@ cleaned_data <- Marketing_data |>
   ) |>
   filter(!is.na(purchase_amount)) |>
   select(-notes)
-
-cleaned_data
 ```
 
-The dataset ("Marketing_data") contains customer-level data from a personalized marketing campaign. It includes variables such as marketing spend per customer and purchase amount, along with other customer attributes. Prior to analyzing, the dataset was cleaned by standardizing inconsistent date formats and handling missing values in key variables such as purchase amount. Non-essential values, such as notes, were excluded from the analysis to improve clarity.
+The dataset contains customer-level data from a personalized marketing campaign. It includes variables such as marketing spend per customer and purchase amount, along with other customer attributes. Prior to analysis, the dataset was cleaned by standardizing inconsistent date formats and handling missing variables in key variables such as purchase amount. Non-essential values, such as notes, were excluded from the analysis to improve clarity. The cleaned dataset is used to examine the relationship between marketing spend and customer purchases.
+
+### Description
+
+The dataset contains `r nrow(cleaned_data)` observations and `r ncol(cleaned_data)` variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical.
+
+```{r}
+
+```
 
 ## References
 
