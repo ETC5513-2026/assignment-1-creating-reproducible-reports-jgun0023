@@ -87,12 +87,69 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
-<p>The dataset contains 132 observations and 6 variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical.</p>
+<p>The dataset contains 132 observations and 6 variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical. <a href="#tbl-avg-keyfigures" class="quarto-xref">Table&nbsp;1</a> presents summary statistics of key variables, showing the average marketing spend, purchase amount, and number of visits across customers. <a href="#fig-marketing-distribution" class="quarto-xref">Figure&nbsp;1</a> illustrates the distribution of marketing spend, indicating that spending varies across customers rather than being uniform. These summaries provide context for understanding how marketing efforts differ across the dataset before analyzing their impact on purchase behavior.</p>
+<div class="cell">
+<div id="tbl-avg-keyfigures" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-avg-keyfigures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary statistics of key variables
+</figcaption>
+<div aria-describedby="tbl-avg-keyfigures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">avg_spend</th>
+<th style="text-align: right;">avg_purchase</th>
+<th style="text-align: right;">avg_visits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">143.9818</td>
+<td style="text-align: right;">148.6572</td>
+<td style="text-align: right;">5.128788</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-marketing-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-marketing-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Marketing-Spend-and-Customer-Purchases_files/figure-html/fig-marketing-distribution-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-marketing-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of Marketing Spend.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p><a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date" class="uri">https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date</a></p>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-spend-vs-purchase" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spend-vs-purchase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Marketing-Spend-and-Customer-Purchases_files/figure-html/fig-spend-vs-purchase-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spend-vs-purchase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Relationship between marketing spend and purchase amount.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-spend-vs-purchase" class="quarto-xref">Figure&nbsp;2</a> shows a positive relationship between marketing spend and purchase amount. As marketing spend increases, purchase amounts also tend to increase, although there is noticeable variation across customers. The fitted regression line highlights an overall upward trend, suggesting that higher marketing investment is generally associated with higher customer spending. This indicates that increasing marketing spend per customer may lead to higher purchase amounts, supporting the research question.</p>
 </section>
 
 </main>

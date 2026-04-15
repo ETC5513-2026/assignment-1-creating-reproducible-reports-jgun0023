@@ -48,11 +48,11 @@ The dataset contains customer-level data from a personalized marketing campaign.
 
 ### Description
 
-The dataset contains `r nrow(cleaned_data)` observations and `r ncol(cleaned_data)` variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical.
+The dataset contains `r nrow(cleaned_data)` observations and `r ncol(cleaned_data)` variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical. @tbl-avg-keyfigures presents summary statistics of key variables, showing the average marketing spend, purchase amount, and number of visits across customers. @fig-marketing-distribution illustrates the distribution of marketing spend, indicating that spending varies across customers rather than being uniform. These summaries provide context for understanding how marketing efforts differ across the dataset before analyzing their impact on purchase behavior.
 
 ```{r}
-#| label: fig-marketing-distribution
-#| fig-cap: "Distribution of Marketing Spend."
+#| label: tbl-avg-keyfigures
+#| tbl-cap: "Summary statistics of key variables"
 
 cleaned_data |>
   summarise(
@@ -60,16 +60,18 @@ cleaned_data |>
     avg_purchase = mean(purchase_amount),
     avg_visits = mean(visits)
   ) |>
-  kable(caption = "Summary statistics of key variables")
+  kable()
+```
+
+```{r}
+#| label: fig-marketing-distribution
+#| fig-cap: "Distribution of Marketing Spend."
 
 ggplot(cleaned_data, aes(x = marketing_spend)) +
   geom_histogram(bins = 20) +
   labs(
     title = "Distribution of Marketing Spend",
-    caption = "Histogram showing the distribution of marketing spend across customers"
   )
 ```
 
-## References
-
-<https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/as.Date>
+## 
