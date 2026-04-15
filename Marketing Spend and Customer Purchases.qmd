@@ -8,6 +8,8 @@ execute:
   echo: false
   warning: false
   messages: false
+  
+bibliography: references.bib
 ---
 
 ```{r}
@@ -49,7 +51,23 @@ The dataset contains customer-level data from a personalized marketing campaign.
 The dataset contains `r nrow(cleaned_data)` observations and `r ncol(cleaned_data)` variables. The dataset consists of a mix of numeric and categorical variables. Numeric variables include marketing spend, purchase amount, and number of visits, while the segment variable is categorical.
 
 ```{r}
+#| label: fig-marketing-distribution
+#| fig-cap: "Distribution of Marketing Spend."
 
+cleaned_data |>
+  summarise(
+    avg_spend = mean(marketing_spend),
+    avg_purchase = mean(purchase_amount),
+    avg_visits = mean(visits)
+  ) |>
+  kable(caption = "Summary statistics of key variables")
+
+ggplot(cleaned_data, aes(x = marketing_spend)) +
+  geom_histogram(bins = 20) +
+  labs(
+    title = "Distribution of Marketing Spend",
+    caption = "Histogram showing the distribution of marketing spend across customers"
+  )
 ```
 
 ## References
