@@ -2,7 +2,9 @@
 title: "Marketing Spend and Customer Purchases"
 author: "Jacqueline Gunawan"
 
-format: html
+format: 
+  html: default
+  pdf: default
 editor: visual
 execute:
   echo: false
