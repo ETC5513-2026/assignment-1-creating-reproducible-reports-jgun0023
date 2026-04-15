@@ -74,4 +74,20 @@ ggplot(cleaned_data, aes(x = marketing_spend)) +
   )
 ```
 
-## 
+## Results
+
+```{r}
+#| label: fig-spend-vs-purchase
+#| fig-cap: "Relationship between marketing spend and purchase amount."
+
+ggplot(cleaned_data, aes(x = marketing_spend, y = purchase_amount)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Marketing Spend vs Purchase Amount",
+    x = "Marketing Spend",
+    y = "Purchase Amount"
+  )
+```
+
+@fig-spend-vs-purchase shows a positive relationship between marketing spend and purchase amount. As marketing spend increases, purchase amounts also tend to increase, although there is noticeable variation across customers. The fitted regression line highlights an overall upward trend, suggesting that higher marketing investment is generally associated with higher customer spending. This indicates that increasing marketing spend per customer may lead to higher purchase amounts, supporting the research question.
